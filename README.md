@@ -15,9 +15,12 @@ subscriptions, payments, content, and watch history using proper relational mode
 -  Review & Rating system
 -  Watch History tracking
 
+
  Database Tables (15 Tables)
 
- Strong Entities
+### Strong Entities
+| Table | Description |
+|-------|-------------|
 | `USER` | Stores user ID, name, email, password, date joined |
 | `PROFILE` | Stores profile name, age restriction, language, linked to USER |
 | `SUBSCRIPTION` | Stores plan type (Basic/Standard/Premium), price, status |
@@ -29,12 +32,13 @@ subscriptions, payments, content, and watch history using proper relational mode
 | `LANGUAGE` | Stores language names and codes |
 | `REVIEW` | Stores star ratings (1-5), review date, linked to PROFILE & CONTENT |
 
- Child Entities (IsA Relationship)
-
+### Child Entities (IsA Relationship)
+| Table | Description |
+|-------|-------------|
 | `MOVIE` | Inherits from CONTENT; stores movie duration & box office |
 | `SERIES` | Inherits from CONTENT; stores total seasons |
 
-Bridge Tables
+### Bridge Tables
 | Table | Description |
 |-------|-------------|
 | `WATCH_HISTORY` | Links PROFILE ↔ CONTENT; tracks watch date & progress |
@@ -45,5 +49,3 @@ Bridge Tables
 - MySQL / SQL
 - Relational Model Design
 - ER Diagram & Normalization
-Author
-Maria uffaq
